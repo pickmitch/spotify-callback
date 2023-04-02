@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Callback</title>
+    <script>
+        (function() {
+            var redirectURL = window.location.href;
+            var appURL = "com.pick.musible.spotify://spotify-login-callback?" + encodeURIComponent(redirectURL);
+            window.location.href = appURL;
+        })();
+    </script>
 </head>
 <body>
     <h1>Spotify Callback</h1>
-    <p>This is the callback page for your app.</p>
+    <p>Please wait while we redirect you back to the app.</p>
 </body>
 </html>
